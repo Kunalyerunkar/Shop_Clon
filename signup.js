@@ -17,9 +17,9 @@ function createacc(){
            
         }
         console.log('a')
-        if('checked'==form.box.value){
+        // if('checked'==form.box.value){
             
-        }
+        // }
         userarr.push(obj)
         localStorage.setItem('userdata',JSON.stringify(userarr))
         window.location.href= 'login.html'
