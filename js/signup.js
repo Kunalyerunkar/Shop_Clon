@@ -17,12 +17,17 @@ function createacc(){
            
         }
         console.log('a')
-        // if('checked'==form.box.value){
-            
-        // }
-        userarr.push(obj)
-        localStorage.setItem('userdata',JSON.stringify(userarr))
-        window.location.href= 'login.html'
+        form.box.addEventListener('click',ischecked())
+        function ischecked(){
+            if(form.box.checked){
+                userarr.push(obj)
+                localStorage.setItem('userdata',JSON.stringify(userarr))
+                window.location.href= 'login.html'
+            }else{
+                alert('accept the box of legal data')
+            }
+        }
+        
 
     }else{
         alert('password is not match')
