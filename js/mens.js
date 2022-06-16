@@ -112,6 +112,8 @@ let database =[
 localStorage.setItem("product", JSON.stringify(database));
 let display = JSON.parse(localStorage.getItem("product"));
 
+let productmore = JSON.parse(localStorage.getItem("productmore")) || [];
+
 display.map(function(elem){
     let  div = document.createElement("div");
     let img = document.createElement("img");
@@ -136,8 +138,26 @@ display.map(function(elem){
     let button = document.createElement("button");
     button.innerText="Choose Options";
 
-    div.append(img,name,brandname,price,shipping,button)
+    div.append(img,name,brandname,price,shipping,button);
 
-    document.querySelector("#prodect").append(div)
-})
+    div.addEventListener("click",function(){
+        product(elem);
+    });
 
+    document.querySelector("#prodect").append(div);
+});
+
+let checbox = document.querySelector("#checkbox");
+checbox.addEventListener("click", function(){
+    if(checbox.checked){
+        console.log(checbox.checked);
+    }
+    else{
+        console.log(checbox.checked);
+
+    }
+});
+
+function product(elem){
+    console.log(elem)
+}
