@@ -209,7 +209,7 @@ function displayProduct(index){
         price.innerText=`$${elem.price.toFixed(2)}`;
 
         let shipping = document.createElement("p");
-        shipping.innerText="Feer shipping";
+        shipping.innerText="Free shipping";
         shipping.style.color="teal";
 
         let button = document.createElement("button");
@@ -408,9 +408,54 @@ document.querySelector("#Xersion").addEventListener("click", function(){
 
 
 //filter price
+document.querySelector("#price1").addEventListener("click", function(){
+    let filter_data = data.filter(function(el){
+        return el.price<=30.00;
+    });
+    displayProduct(filter_data);
+});
 
+document.querySelector("#price2").addEventListener("click", function(){
+    let filter_data = data.filter(function(el){
+        return el.price>30.01&&el.price<35.00;
+    });
+    displayProduct(filter_data);
+});
+
+document.querySelector("#price3").addEventListener("click", function(){
+    let filter_data = data.filter(function(el){
+        return el.price>35.01&&el.price<45.00;
+    });
+    displayProduct(filter_data);
+});
+
+document.querySelector("#price4").addEventListener("click", function(){
+    let filter_data = data.filter(function(el){
+        return el.price>45.01&&el.price<60.00;
+    });
+    displayProduct(filter_data);
+});
+
+document.querySelector("#price5").addEventListener("click", function(){
+    let filter_data = data.filter(function(el){
+        return el.price>=60.00;
+    });
+    displayProduct(filter_data);
+});
+
+
+// submit feedback
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let textarea = document.querySelector("textarea").value;
+    if(textarea!=""){
+        document.querySelector("#Feedback").innerHTML="";
+        document.querySelector("#Afeedback").style.display="block";
+    }
+    
+});
 
 //go to product page
 function product(elem){
-    console.log(elem)
+    console.log(elem);
 }
