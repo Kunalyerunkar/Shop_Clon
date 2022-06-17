@@ -112,7 +112,7 @@ let database =[
 localStorage.setItem("product", JSON.stringify(database));
 let display = JSON.parse(localStorage.getItem("product"));
 
-let productmore = JSON.parse(localStorage.getItem("productmore")) || [];
+let single_product =  [];
 
 display.map(function(elem){
     let  div = document.createElement("div");
@@ -137,6 +137,22 @@ display.map(function(elem){
 
     let button = document.createElement("button");
     button.innerText="Choose Options";
+    button.addEventListener('click',function(){
+        isproduct(elem)
+    })
+    function isproduct(elem){
+        let obj ={
+            image : elem.image,
+            name :elem.name,
+            brandname: elem.brandname,
+            price: elem.price,
+        }
+        single_product.push(obj)
+        
+        console.log(single_product)
+        localStorage.setItem('single_product',JSON.stringify(single_product))
+        window.location.href='./product.html'
+    }
 
     div.append(img,name,brandname,price,shipping,button);
 

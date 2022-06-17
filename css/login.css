@@ -6,15 +6,12 @@
     margin: auto;
 
 }
+h1{
+    text-align: center;
+    margin-right: 30%;
+}
 #container > div{
  width :40%;
-}
-#container > div:first-child{
-    /* border: 1px solid red; */
-}
-#container > div:last-child{
-    /* border: 1px solid green; */
-
 }
 
 form{
@@ -29,17 +26,21 @@ input, button{
 }
 form>input:last-child{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 50px;
     background-color: rgba(16, 3, 96, 0.611);
     color: white;
     font-size: large;
     font-weight: bold;
+    border: none;
 }
 button{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: large;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
+    
 }
 @media only screen and (min-width:480px) and (max-width:720px) {
     #container{

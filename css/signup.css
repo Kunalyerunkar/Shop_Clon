@@ -40,3 +40,16 @@ form>input:nth-child(15){
     font-weight: bold;
 }
 
+#button{
+    background-color: hsl(235,23%,33%);
+    color: white;
+    font-size: larger;
+    font-style: normal;
+    border-radius: 50px;
+    width: 60%;
+    border: none;
+
+}
+a{
+    text-decoration: none;
+}

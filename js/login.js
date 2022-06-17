@@ -13,7 +13,7 @@ function login(userdata){
     userdata.forEach(function(elem){
         if(email == elem.email && pass == elem.pass1){
             console.log('succss')
-            window.location.href = 'signup.html'
+            window.location.href = 'product.html'
             
         }else{
             alert('Wrong password')

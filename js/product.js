@@ -1,27 +1,31 @@
 
-let product = JSON.parse(localStorage.getItem('product'));
-console.log(product)
+let single_product = JSON.parse(localStorage.getItem('single_product'));
+let userdata = JSON.parse(localStorage.getItem('userdata'));
+let addedcart =  []
+console.log(single_product)
 let container = document.createElement('div');
 container.setAttribute('id','container');
 
 
-product.forEach(function(elem){
-    // console.log(elem)
-// console.log(elem.image)
+single_product.forEach(function(elem){
+    
     let inner_container = document.createElement('div')
     inner_container.setAttribute('class','inner_container');
     let div1 = document.createElement('div')
     let img = document.createElement('img')
     img.setAttribute('src',elem.image)
     div1.append(img)
-
+console.log(addedcart)
     let div2 = document.createElement('div')
     let h2 = document.createElement('h2')
     h2.innerText = elem.name
+
     let p1 = document.createElement('p')
     p1.innerHTML = 'Sold bye '+elem.brandname+'<br/><br/><br/><br/><br/><br/>'
+
     let p2 = document.createElement('p')
     p2.innerText = '$'+elem.price
+
     let hr1 = document.createElement('hr')
     let p3 = document.createElement('p')
     p3.innerText = 'Free Standard Shipping on orders from Ranch & Home.'
@@ -54,8 +58,33 @@ product.forEach(function(elem){
     inp.setAttribute('type','number')
     let button = document.createElement('button')
     button.innerText = 'Add to Cart'
+    console.log(userdata)
+    button.addEventListener('click',function(){
+        
+        if(userdata==null){
+            window.location.href ='./login.html'
+        }else{
+            iscart(elem)
+            alert('Added to Cart')
+        }
+        
+    })
+    function iscart(elem){
+        let obj ={
+            image : elem.image,
+            name :elem.name,
+            brandname: elem.brandname,
+            price: elem.price,
+            size: drop1.value,
+            qty: inp.value
+        }
+        addedcart.push(obj)
+        
+        console.log(addedcart)
+        localStorage.setItem('addedcart',JSON.stringify(addedcart))
 
-
+    }
+    
     div3.append(img2,p4)
     drop1.append(op1,op2,op3,op4,op5,op6)
     div4.append(label2,inp,button)
