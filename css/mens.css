@@ -129,7 +129,7 @@ input[type=checkbox]:checked:after {
     width: 15px;
     border-left: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
-    transform: translateY(-2.5px) rotate(-45deg);
+    transform: translateY(-2.5px) rotate(-40deg);
 }
 textarea{
     border-radius: 2px;
@@ -196,6 +196,7 @@ textarea{
     background-color:white;
     border: 1px solid #202340 ;
     padding: 5%;
+    width: 70%;
     border-radius: 30px;
     font-weight: bolder;
     color: #202340 ;
@@ -205,4 +206,7 @@ textarea{
 #prodect>div>button:hover,#feedback:hover{
     background-color: rgb(5, 0, 24);
     color: white;
+}
+#Afeedback{
+    display:none;
 }
