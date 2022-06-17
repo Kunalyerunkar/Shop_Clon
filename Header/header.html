@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Header</title>
+    <title>Header</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,8 +24,9 @@
 
             <div id="navSecondSecond">
                 <div id="navbarFirst">
-                    <i class="material-icons" style="font-size:30px">menu</i>
-                    <p class="navbarpara">categories</p>
+                    <i id="menu" class="material-icons" style="font-size:30px">menu</i>
+                    <!-- <p class="navbarpara">categories</p> -->
+                    <a href="">Categories</a>
                 </div>
                 <div id="navbarSecond">
                     <a href="">Exclusive Brands</a>
@@ -39,30 +40,45 @@
                 <div id="navbarThird">
                     <div class="navbarThirdFirst">
                         <i class="material-icons" style="font-size:32px">account_circle</i>
-                        <p class="navbarpara">Sign In</p>
+                        <a href="">Sign In</a>
                     </div>
                     <div class="navbarThirdFirst">
                         <i class="fa fa-shopping-bag" style="font-size:22px;"></i>
-                        <p class="navbarpara">Orders</p>
+                        <a href="">Orders</a>
                     </div>
                     <div class="navbarThirdFirst">
-                        <i class="material-icons" style="font-size:28px">add_shopping_cart</i>
-                        <p class="navbarpara">Cart</p>
+                        <i id="cart" class="material-icons" style="font-size:28px">add_shopping_cart</i>
+                        <a href="">Cart</a>
                     </div>
                 </div>
             </div>
+            <section id="menuSection">
+                <a href="">Cloths</a>
+                <a href="">Shoes</a>
+                <a href="">Beauty</a>
+                <a href="">Sports</a>
+            </section>
         </div>
     </div>
     <section id="navbarSection1">
         <div class="section1">
             <label class="cart">Shopping Cart</label>
-            <i class="fa fa-close" style="font-size:22px"></i>
+            <i class="fa fa-close" id="cross" style="font-size:22px"></i>
         </div>
         <h2 class="carth2">Your shopping cart is empty</h2>
         <h4 class="carth4">Continue Shopping <span class="span1">to add items to your cart.</span></h4>
         <button class="btn1">Payment Options/Save For Later</button>
         <button class="btn2">Continue Shopping</button>
     </section>
+    
 </body>
 </html>
 <script src="header.js"></script>
+
+
+
+
+
+
+
+

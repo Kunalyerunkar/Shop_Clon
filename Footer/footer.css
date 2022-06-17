@@ -3,14 +3,14 @@
     padding: 0px;
 }
 footer {
-    height:400px;
+    height:320px;
     width: 100vw;
     display: flex;
     /* justify-content: space-between; */
     flex-direction: column;
     background-color: #cfd8e1;
     color: #fff;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #footerFirst{
     height: 35px;
@@ -33,6 +33,10 @@ button:hover{cursor: pointer; background-color: black; color: white;}
 .footerSecondSecond{margin-right: 25px;}
 i{margin: 5px;}
 i:hover{cursor: pointer;}
+.fa-envelope:hover{color: burlywood;}
+.fa-facebook-f:hover{color: rgb(71, 71, 217);}
+.fa-twitter:hover{color:rgb(7, 162, 233)}
+.fa-pinterest:hover{color: rgb(255, 16, 3);}
 #footerThird{
     color: black;
     padding: 10px;
@@ -49,12 +53,13 @@ i:hover{cursor: pointer;}
   
 }
 #footerFourth>img{height: 90px; margin: auto;}
-#footerFifth{
+/* #footerFifth{
     height: 100px;
     width: 120px;
     margin: auto;
 }
 #footerFifth>img{height: 90px; margin: auto; border-radius: 20px;}
+ */
 
 
 
@@ -62,3 +67,4 @@ i:hover{cursor: pointer;}
 
 
 
+ 

@@ -38,7 +38,7 @@
 }
 #searchbar{
     height: 45px;
-    width: 550px;
+    width: 40%;
     text-align: center;
     border: 1px solid black;
     border-radius: 30px;
@@ -51,6 +51,8 @@
     justify-content: space-between;
     /* border: 1px solid red; */
 }
+#navbarFirst>a{color: black; text-decoration: none; padding-left: 5px;}
+#navbarFirst>a:hover{color:rgb(28, 179, 179);}
 #navbarFirst{margin-left: 30px; display: flex; align-items: center; justify-content: center;}
 #navbarFirst:hover{color: rgb(28, 179, 179);}
 .navbarpara{font-size: 18px; margin: 5px;}
@@ -68,25 +70,39 @@
     margin-right: 20px;
     justify-content: space-between;
 }
-.navbarThirdFirst{
+#navbarThird>div{
     margin: 0px 22px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+#navbarThird>div>a{color: black; text-decoration: none; padding-left: 5px;}
+#navbarThird>div>a:hover{color:rgb(28, 179, 179);}
 .navbarThirdFirst:hover{color: rgb(28, 179, 179);}
 .material-icons:hover{cursor: pointer;}
 #navbarSection1{
     position: relative;
     visibility: hidden;
     display: flex;
-    margin-left: 770px;
+    margin-left: 870px;
     flex-direction: column;
     width: 40vw;
-    height: 690px;
+    height: 720px;
     background-color: aliceblue;
     border: 1px solid black;
 }
+#menuSection{
+    position: relative;
+    visibility: hidden;
+    width: 120px;
+    padding: 15px;
+    display: flex;
+    background-color: bisque;
+    flex-direction: column;
+    border: 1px solid black;
+}
+#menuSection>a{text-decoration: none; margin: auto; margin-top: 5px; color: black;}
+#menuSection>a:hover{text-decoration: underline; color: rgb(97, 134, 134);}
 .section1{display: flex; justify-content: space-around; margin-top: 20px; font-size: 22px;}
 .section1>i{border: 1px solid black; border-radius: 20px; padding: 2px; cursor: pointer;}
 .carth2,.carth4{margin: 10px;}
@@ -103,7 +119,7 @@
 .btn2{
     width: 50%;
     padding: 10px; 
-    margin-top: 80%;
+    margin-top: 70%;
     margin-left: 20%;
     font-weight: bold; 
     background-color: white; 
@@ -112,12 +128,26 @@
 .btn1,.btn2:hover{color: white; background-color: black;}
 
 
+/* 
+@media all and (min-width: 768px) and (max-width: 1024px){
+   #logoimg, #rightimg{ display: none; }
+   #menu, #navbarSecond, .navbarThirdFirst>a{display: none;}
+    #navSecond{ height: 70px; }
+    #navSecondFirst{ position: absolute; justify-content: space-evenly; }
+    #searchbar{margin-left: 100px; width: 450px;}
+    #navSecondSecond{ position: relative;}
+}
 
-
-
-
-
-
+@media all and (min-width: 320px) and (max-width: 767px){
+    #logoimg, #rightimg{ display: none; }
+    #menu, #navbarSecond, .navbarThirdFirst>a{display: none;}
+     #navSecond{ height: 70px; }
+     #navSecondFirst{ position: absolute; justify-content: space-evenly; }
+     #searchbar{margin-left: 100px; width: 300px;}
+     #navSecondSecond{ position: relative;}
+ }
+ 
+ */
 
 
 
